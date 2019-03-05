@@ -8,6 +8,9 @@ ARG SCW_ARCH
 ENV DEBIAN_FRONTEND=noninteractive \
     SCW_BASE_IMAGE=scaleway/ubuntu:bionic
 
+# Copy architecture specific files
+# This is mainly used to set FLASH_KERNEL=1 in /etc/environment for arm
+COPY ./overlay-${SCW_ARCH}/ /
 
 # Adding and calling builder-enter
 COPY ./overlay-base/usr/local/sbin/scw-builder-enter /usr/local/sbin/
