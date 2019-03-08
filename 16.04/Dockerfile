@@ -134,5 +134,9 @@ RUN chown root:syslog /var/log \
  && chmod 755 /etc/default
 
 
+# Remove dbus machine-id
+RUN rm /var/lib/dbus/machine-id
+
+
 # Clean rootfs from image-builder
 RUN /usr/local/sbin/scw-builder-leave
