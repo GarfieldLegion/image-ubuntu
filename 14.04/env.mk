@@ -5,5 +5,5 @@ IMAGE_TITLE = Ubuntu Trusty
 IMAGE_DESCRIPTION = Ubuntu Trusty (14.04)
 IMAGE_SOURCE_URL = https://github.com/scaleway/image-ubuntu
 IMAGE_VENDOR_URL = http://www.ubuntu.com
-IMAGE_BOOTSCRIPT = mainline 4.4
+IMAGE_BOOTSCRIPT = longterm 4.4 latest
 IMAGE_BASE_FLAVORS = common docker-based upstart feature-motd
